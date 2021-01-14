@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="WSGestionUsuario" targetNamespace="http://webservices/" xmlns:tns="http://webservices/" 
+ >
+    <message name="Validar"/>
+    <message name="ValidarResponse"/>
+    <message name="Registrar"/>
+    <message name="RegistrarResponse"/>
+    <portType name="WSGestionUsuario">
+        <operation name="Validar">
+            <input message="tns:Validar"/>
+            <output message="tns:ValidarResponse"/>
+        </operation>
+        <operation name="Registrar">
+            <input message="tns:Registrar"/>
+            <output message="tns:RegistrarResponse"/>
+        </operation>
+    </portType>
+    <binding name="WSGestionUsuarioPortBinding" type="tns:WSGestionUsuario">
+        <operation name="Validar">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="Registrar">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="WSGestionUsuario">
+        <port name="WSGestionUsuarioPort" binding="tns:WSGestionUsuarioPortBinding"/>
+    </service>
+</definitions>
